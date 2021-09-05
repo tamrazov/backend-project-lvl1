@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "brain-games",
   "main": "index.js",
+  "type": "module",
   "bin": {
-    "code": "brain-games.js"
+    "code": "brain-games.js",
+    "brain-games": "bin/brain-games.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
