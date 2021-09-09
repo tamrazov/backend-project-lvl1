@@ -6,11 +6,10 @@ const engine = (description, game) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hi ${userName}!`);
+  console.log(description);
 
-  for (let i = 1; i < COUNT_QUESTIONS; i += 1) {
-    console.log(`Question: ${num}`);
-    const answer = readlineSync.question(`Your answer: `);
-
+  for (let i = 0; i < COUNT_QUESTIONS; i += 1) {
+    const [answer, curAnswer] = game();
     if (answer === curAnswer) {
       console.log('Correct!');
     } else {
@@ -18,4 +17,8 @@ const engine = (description, game) => {
       break;
     }
   }
-}
+
+  console.log(`Let's try again, ${userName}!`);
+};
+
+export default engine;

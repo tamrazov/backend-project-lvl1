@@ -1,9 +1,7 @@
 export const randomInteger = (min, max) => {
-  let rand = min + Math.random() * (max - min + 1);
+  const rand = min + Math.random() * (max - min + 1);
 
   return Math.floor(rand);
 };
 
-export const isEven = (num) => {
-  return num % 2 === 0;
-};
+export const isEven = (num) => num % 2 === 0;
