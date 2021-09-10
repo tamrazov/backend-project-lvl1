@@ -7,3 +7,11 @@ export const randomInteger = (min, max) => {
 export const isEven = (num) => num % 2 === 0;
 
 export const randElemFromArr = (array) => array[Math.floor(Math.random() * array.length)];
+
+export const gcd = (a, b) => {
+  if (!b) {
+    return a;
+  }
+
+  return gcd(b, a % b);
+};
