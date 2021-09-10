@@ -15,3 +15,15 @@ export const gcd = (a, b) => {
 
   return gcd(b, a % b);
 };
+
+export const getProgression = (start, step, count) => {
+  let number = start;
+  const result = [];
+
+  for (let i = 0; i < count; i += 1) {
+    number += step;
+    result.push(number);
+  }
+
+  return result;
+};
