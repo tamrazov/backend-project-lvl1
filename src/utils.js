@@ -5,3 +5,5 @@ export const randomInteger = (min, max) => {
 };
 
 export const isEven = (num) => num % 2 === 0;
+
+export const randElemFromArr = (array) => array[Math.floor(Math.random() * array.length)];

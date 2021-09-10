@@ -13,6 +13,7 @@ parserOptions:
   sourceType: module
 
 rules:
+  eqeqeq: off
   no-console: 0
   import/extensions: 0
   no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
