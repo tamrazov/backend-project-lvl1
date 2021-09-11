@@ -12,7 +12,6 @@ const engine = (description, game) => {
     const [answer, curAnswer] = game();
     if (answer == curAnswer) {
       console.log('Correct!');
-      continue;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${curAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
@@ -20,7 +19,7 @@ const engine = (description, game) => {
     }
   }
 
-  console.log(`Congratulations, ${userName}!`)
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default engine;
