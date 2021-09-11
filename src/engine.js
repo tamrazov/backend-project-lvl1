@@ -10,7 +10,7 @@ const engine = (description, game) => {
 
   for (let i = 0; i < COUNT_QUESTIONS; i += 1) {
     const [answer, curAnswer] = game();
-    if (answer == curAnswer) {
+    if (answer === curAnswer) {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${curAnswer}'.`);

@@ -13,7 +13,7 @@ const brainProgression = () => {
   console.log(`Question: ${progression.join(' ')}`);
   const answer = readlineSync.question('Your answer: ');
 
-  return [answer, curAnswer];
+  return [+answer, +curAnswer];
 };
 
 export default brainProgression;

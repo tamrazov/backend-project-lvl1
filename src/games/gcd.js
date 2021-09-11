@@ -9,7 +9,7 @@ const brainGcd = () => {
   console.log(`Question: ${num1} ${num2}`);
   const answer = readlineSync.question('Your answer: ');
 
-  return [answer, curAnswer];
+  return [+answer, curAnswer];
 };
 
 export default brainGcd;

@@ -24,7 +24,7 @@ const brainCalc = () => {
   console.log(`Question: ${num1} ${expression} ${num2}`);
   const answer = readlineSync.question('Your answer: ');
 
-  return [answer, curAnswer];
+  return [+answer, +curAnswer];
 };
 
 export default brainCalc;
