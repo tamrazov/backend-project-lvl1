@@ -9,7 +9,7 @@ Simple games to boost your brain.
 #### Installing  
 
 ```
-composer require aleksandrtamrazov/brain-games
+npm install @hexlet/code
 ```
 
 #### Description  
