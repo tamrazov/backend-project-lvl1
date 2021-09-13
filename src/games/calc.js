@@ -1,4 +1,4 @@
-import { getRandomInteger, randElemFromArr } from '../utils.js';
+import { getRandomInteger, getRandElemFromArr } from '../utils.js';
 
 const getCurrentValue = (num1, num2, expression) => {
   switch (true) {
@@ -15,7 +15,7 @@ const getCurrentValue = (num1, num2, expression) => {
 
 const playingCalculate = () => {
   const expressionsArr = ['+', '-', '*'];
-  const expression = randElemFromArr(expressionsArr);
+  const expression = getRandElemFromArr(expressionsArr);
   const num1 = getRandomInteger(1, 10);
   const num2 = getRandomInteger(1, 10);
   const curAnswer = getCurrentValue(num1, num2, expression);

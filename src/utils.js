@@ -4,4 +4,4 @@ export const getRandomInteger = (min, max) => {
   return Math.floor(rand);
 };
 
-export const randElemFromArr = (array) => array[Math.floor(Math.random() * array.length)];
+export const getRandElemFromArr = (array) => array[Math.floor(Math.random() * array.length)];
