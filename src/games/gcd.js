@@ -5,7 +5,7 @@ const getGcd = (a, b) => {
     return a;
   }
 
-  return gcd(b, a % b);
+  return getGcd(b, a % b);
 };
 
 const playingGcd = () => {
@@ -14,7 +14,7 @@ const playingGcd = () => {
   const curAnswer = getGcd(num1, num2);
   const question = `Question: ${num1} ${num2}`;
 
-  return [curAnswer, question];
+  return [curAnswer.toString(), question];
 };
 
 export default playingGcd;
