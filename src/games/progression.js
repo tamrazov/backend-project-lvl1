@@ -1,19 +1,28 @@
-import readlineSync from 'readline-sync';
-import { randomInteger, getProgression } from '../utils.js';
+import { getRandomInteger } from '../utils.js';
 
-const brainProgression = () => {
-  const countProgression = randomInteger(5, 10);
-  const startProgression = randomInteger(0, 100);
-  const stepProgression = randomInteger(1, 10);
-  const deletedItem = randomInteger(0, countProgression - 1);
+export const getProgression = (start, step, count) => {
+  let number = start;
+  const result = [];
+
+  for (let i = 0; i < count; i += 1) {
+    number += step;
+    result.push(number);
+  }
+
+  return result;
+};
+
+const playingProgression = () => {
+  const countProgression = getRandomInteger(5, 10);
+  const startProgression = getRandomInteger(0, 100);
+  const stepProgression = getRandomInteger(1, 10);
+  const deletedItem = getRandomInteger(0, countProgression - 1);
 
   const progression = getProgression(startProgression, stepProgression, countProgression);
   const curAnswer = progression.splice(deletedItem, 1, '..');
+  const question = `Question: ${progression.join(' ')}`;
 
-  console.log(`Question: ${progression.join(' ')}`);
-  const answer = readlineSync.question('Your answer: ');
-
-  return [+answer, +curAnswer];
+  return [curAnswer.toString(), question];
 };
 
-export default brainProgression;
+export default playingProgression;

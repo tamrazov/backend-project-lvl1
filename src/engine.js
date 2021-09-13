@@ -2,14 +2,16 @@ import readlineSync from 'readline-sync';
 
 const COUNT_QUESTIONS = 3;
 
-const engine = (description, game) => {
+const startEngine = (description, game) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(description);
 
   for (let i = 0; i < COUNT_QUESTIONS; i += 1) {
-    const [answer, curAnswer] = game();
+    const [curAnswer, question] = game();
+    console.log(question);
+    const answer = readlineSync.question('Your answer: ');
     if (answer === curAnswer) {
       console.log('Correct!');
     } else {
@@ -22,4 +24,4 @@ const engine = (description, game) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default engine;
+export default startEngine;

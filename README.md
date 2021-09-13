@@ -3,7 +3,7 @@
 Simple games to boost your brain.
 
 [![Actions Status](https://github.com/aleksandrtamrazov/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/aleksandrtamrazov/backend-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8dbc6545d84e1c0a2b91/maintainability)](https://codeclimate.com/github/aleksandrtamrazov/backend-project-lvl1/maintainability)
 [![Actions Status](https://github.com/aleksandrtamrazov/backend-project-lvl1/workflows/lint-check/badge.svg)](https://github.com/aleksandrtamrazov/backend-project-lvl1/actions)
 
 #### Installing  

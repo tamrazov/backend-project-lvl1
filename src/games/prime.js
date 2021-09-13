@@ -1,14 +1,19 @@
-import readlineSync from 'readline-sync';
-import { randomInteger, isPrime } from '../utils.js';
+import { getRandomInteger } from '../utils.js';
 
-const brainPrime = () => {
-  const num = randomInteger(1, 10);
-  const curAnswer = isPrime(num) ? 'yes' : 'no';
+const isPrime = (num) => {
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) return false;
+  }
 
-  console.log(`Question: ${num}`);
-  const answer = readlineSync.question('Your answer: ');
-
-  return [answer, curAnswer];
+  return num > 1;
 };
 
-export default brainPrime;
+const playingPrime = () => {
+  const num = getRandomInteger(1, 10);
+  const curAnswer = isPrime(num) ? 'yes' : 'no';
+  const question = `Question: ${num}`;
+
+  return [curAnswer, question];
+};
+
+export default playingPrime;

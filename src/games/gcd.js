@@ -1,15 +1,20 @@
-import readlineSync from 'readline-sync';
-import { randomInteger, gcd } from '../utils.js';
+import { getRandomInteger } from '../utils.js';
 
-const brainGcd = () => {
-  const num1 = randomInteger(1, 10);
-  const num2 = randomInteger(1, 10);
-  const curAnswer = gcd(num1, num2);
+const getGcd = (a, b) => {
+  if (!b) {
+    return a;
+  }
 
-  console.log(`Question: ${num1} ${num2}`);
-  const answer = readlineSync.question('Your answer: ');
-
-  return [+answer, curAnswer];
+  return gcd(b, a % b);
 };
 
-export default brainGcd;
+const playingGcd = () => {
+  const num1 = getRandomInteger(1, 10);
+  const num2 = getRandomInteger(1, 10);
+  const curAnswer = getGcd(num1, num2);
+  const question = `Question: ${num1} ${num2}`;
+
+  return [curAnswer, question];
+};
+
+export default playingGcd;
