@@ -8,13 +8,13 @@ const getGcd = (a, b) => {
   return getGcd(b, a % b);
 };
 
-const playingGcd = () => {
+const startGameGcd = () => {
   const num1 = getRandomInteger(1, 10);
   const num2 = getRandomInteger(1, 10);
   const curAnswer = getGcd(num1, num2);
-  const question = `Question: ${num1} ${num2}`;
+  const question = `${num1} ${num2}`;
 
   return [curAnswer.toString(), question];
 };
 
-export default playingGcd;
+export default startGameGcd;

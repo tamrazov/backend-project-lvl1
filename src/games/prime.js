@@ -8,12 +8,11 @@ const isPrime = (num) => {
   return num > 1;
 };
 
-const playingPrime = () => {
+const startGamePrime = () => {
   const num = getRandomInteger(1, 10);
   const curAnswer = isPrime(num) ? 'yes' : 'no';
-  const question = `Question: ${num}`;
 
-  return [curAnswer, question];
+  return [curAnswer, num];
 };
 
-export default playingPrime;
+export default startGamePrime;

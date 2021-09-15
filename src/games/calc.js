@@ -1,27 +1,27 @@
 import { getRandomInteger, getRandElemFromArr } from '../utils.js';
 
-const getCurrentValue = (num1, num2, expression) => {
+const calculate = (num1, num2, operator) => {
   switch (true) {
-    case expression === '+':
+    case operator === '+':
       return num1 + num2;
-    case expression === '-':
+    case operator === '-':
       return num1 - num2;
-    case expression === '*':
+    case operator === '*':
       return num1 * num2;
     default:
-      return null;
+      throw new Error(`Unknown operator: '${operator}'!`);
   }
 };
 
-const playingCalculate = () => {
-  const expressionsArr = ['+', '-', '*'];
-  const expression = getRandElemFromArr(expressionsArr);
+const startGameCalculate = () => {
+  const operatorsArr = ['+', '-', '*'];
+  const operator = getRandElemFromArr(operatorsArr);
   const num1 = getRandomInteger(1, 10);
   const num2 = getRandomInteger(1, 10);
-  const curAnswer = getCurrentValue(num1, num2, expression);
-  const question = `Question: ${num1} ${expression} ${num2}`;
+  const curAnswer = calculate(num1, num2, operator);
+  const question = `${num1} ${operator} ${num2}`;
 
   return [curAnswer.toString(), question];
 };
 
-export default playingCalculate;
+export default startGameCalculate;

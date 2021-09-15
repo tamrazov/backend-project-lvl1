@@ -10,7 +10,7 @@ const startEngine = (description, game) => {
 
   for (let i = 0; i < COUNT_QUESTIONS; i += 1) {
     const [curAnswer, question] = game();
-    console.log(question);
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === curAnswer) {
       console.log('Correct!');

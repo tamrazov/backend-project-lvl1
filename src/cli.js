@@ -6,4 +6,4 @@ const startCli = () => {
   console.log(`Hello, ${userName}!`);
 };
 
-startCli();
+export default startCli;

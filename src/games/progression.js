@@ -1,28 +1,25 @@
 import { getRandomInteger } from '../utils.js';
 
-export const getProgression = (start, step, count) => {
-  let number = start;
-  const result = [];
+export const getProgression = (start, step, length) => {
+  const result = [start];
 
-  for (let i = 0; i < count; i += 1) {
-    number += step;
-    result.push(number);
+  for (let i = 0; i < length; i += 1) {
+    result.push(result[i] + step);
   }
 
   return result;
 };
 
-const playingProgression = () => {
-  const countProgression = getRandomInteger(5, 10);
+const startGameProgression = () => {
+  const lengthProgression = getRandomInteger(5, 10);
   const startProgression = getRandomInteger(0, 100);
   const stepProgression = getRandomInteger(1, 10);
-  const deletedItem = getRandomInteger(0, countProgression - 1);
+  const deletedItem = getRandomInteger(0, lengthProgression - 1);
 
-  const progression = getProgression(startProgression, stepProgression, countProgression);
+  const progression = getProgression(startProgression, stepProgression, lengthProgression);
   const curAnswer = progression.splice(deletedItem, 1, '..');
-  const question = `Question: ${progression.join(' ')}`;
 
-  return [curAnswer.toString(), question];
+  return [curAnswer.toString(), progression.join(' ')];
 };
 
-export default playingProgression;
+export default startGameProgression;
