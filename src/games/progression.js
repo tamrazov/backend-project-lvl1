@@ -1,5 +1,7 @@
 import { getRandomInteger } from '../utils.js';
 
+export const DESC = 'What number is missing in the progression?';
+
 export const getProgression = (start, step, length) => {
   const result = [start];
 
@@ -17,9 +19,9 @@ const startGameProgression = () => {
   const deletedItem = getRandomInteger(0, lengthProgression - 1);
 
   const progression = getProgression(startProgression, stepProgression, lengthProgression);
-  const curAnswer = progression.splice(deletedItem, 1, '..');
+  const answer = progression.splice(deletedItem, 1, '..');
 
-  return [curAnswer.toString(), progression.join(' ')];
+  return [answer.toString(), progression.join(' ')];
 };
 
 export default startGameProgression;

@@ -1,5 +1,7 @@
 import { getRandomInteger } from '../utils.js';
 
+export const DESC = 'Find the greatest common divisor of given numbers.';
+
 const getGcd = (a, b) => {
   if (!b) {
     return a;
@@ -11,10 +13,10 @@ const getGcd = (a, b) => {
 const startGameGcd = () => {
   const num1 = getRandomInteger(1, 10);
   const num2 = getRandomInteger(1, 10);
-  const curAnswer = getGcd(num1, num2);
+  const answer = getGcd(num1, num2);
   const question = `${num1} ${num2}`;
 
-  return [curAnswer.toString(), question];
+  return [answer.toString(), question];
 };
 
 export default startGameGcd;

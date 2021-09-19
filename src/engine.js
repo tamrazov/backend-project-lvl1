@@ -9,13 +9,13 @@ const startEngine = (description, game) => {
   console.log(description);
 
   for (let i = 0; i < COUNT_QUESTIONS; i += 1) {
-    const [curAnswer, question] = game();
+    const [correctAnswer, question] = game();
     console.log(`Question: ${question}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (answer === curAnswer) {
+    const playerAnswer = readlineSync.question('Your answer: ');
+    if (correctAnswer === playerAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${curAnswer}'.`);
+      console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
